@@ -39,7 +39,7 @@ export async function searchImages(searchQuery, page, gallery, btnLoadMore) {
       } = hit;
       const card = `
     <div class="photo-card">
-        <a href="${largeImageURL}" class="lightbox">
+        <a href="${largeImageURL}" class="lightbox" data-alt="${tags}">
         <img src="${webformatURL}" alt="${tags}" loading="lazy" />
         </a>
         <div class="info">
