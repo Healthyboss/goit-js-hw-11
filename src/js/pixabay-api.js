@@ -51,7 +51,11 @@ export async function searchImages(searchQuery, page, gallery, btnLoadMore) {
     </div>`;
       gallery.insertAdjacentHTML('beforeend', card);
     });
-    const lightbox = new SimpleLightbox('.lightbox');
+    //   const lightbox = new SimpleLightbox('.lightbox');
+    const lightbox = new SimpleLightbox('.gallery a', {
+      captionsData: 'alt',
+      captionDelay: 250,
+    });
     lightbox.refresh();
 
     btnLoadMore.style.display = hits.length < totalHits ? 'block' : 'none';
